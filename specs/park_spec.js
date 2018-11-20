@@ -112,5 +112,23 @@ describe('Park',function () {
     assert.deepStrictEqual(park.dinosaurs,[icky,carl]);
   })
 
+  it("should be possible to Provide an object containing each of the diet types and the number of dinosaurs in the park of that diet type ", function () {
+    let icky = new Dinosaur("Icthyosaurus", "Carnivore", 100);
+    let barney = new Dinosaur("Velociraptor","Carnivore",50);
+    let cleverGirl = new Dinosaur("Velociraptor","Carnivore",400);
+    let carl = new Dinosaur("Stegasaurus","Herbivore", 120);
+    park.addDinosaur(icky);
+    park.addDinosaur(barney);
+    park.addDinosaur(cleverGirl);
+    park.addDinosaur(carl);
+    park.getOverviewOfDiets();
+    let expected = {
+      "Herbivore" : 1,
+      "Carnivore" : 3,
+      "Omnivore" : 0
+    };
+    assert.deepStrictEqual(park.getOverviewOfDiets(),expected);
+  })
+
 
 });
