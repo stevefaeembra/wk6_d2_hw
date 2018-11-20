@@ -5,14 +5,16 @@ describe('Dinosaur',function () {
   let barney;
 
   beforeEach(function () {
-    barney = new Dinosaur("Velociraptor");
+    barney = new Dinosaur("Velociraptor","Carnivore");
   });
 
   it("should have a species", function () {
     assert.strictEqual(barney.species,"Velociraptor");
   });
 
-  it("should have a diet (e.g. carnivore, herbivore or omnivore");
+  it("should have a diet (e.g. carnivore, herbivore or omnivore", function () {
+    assert.strictEqual(barney.diet,"Carnivore");
+  });
 
   it("should have an average number of visitors attracted per day");
 
