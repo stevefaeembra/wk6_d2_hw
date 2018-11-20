@@ -2,8 +2,15 @@ const assert = require('assert');
 const Dinosaur = require('../models/dinosaur');
 
 describe('Dinosaur',function () {
+  let barney;
 
-  it("should have a species");
+  beforeEach(function () {
+    barney = new Dinosaur("Velociraptor");
+  });
+
+  it("should have a species", function () {
+    assert.strictEqual(barney.species,"Velociraptor");
+  });
 
   it("should have a diet (e.g. carnivore, herbivore or omnivore");
 

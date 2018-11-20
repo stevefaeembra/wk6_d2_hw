@@ -6,7 +6,7 @@ describe('Park',function () {
   it("should have a name");
 
   it("should have a ticket price");
-
+  
   it("should have a collection of dinosaurs");
 
   it("should be possible to Add a dinosaur to its collection of dinosaurs");
