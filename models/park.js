@@ -41,4 +41,14 @@ Park.prototype.fetchDinosaursOfType = function (dinosaurType) {
     return dinos;
 };
 
+Park.prototype.getDailyVisitors = function () {
+    // total average visitors per day
+    let total = 0;
+    for (let dinosaur of this.dinosaurs) {
+      total += dinosaur.visitorsPerDay;
+    }
+    return total;
+};
+
+
 module.exports = Park;
