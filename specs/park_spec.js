@@ -6,14 +6,16 @@ describe('Park',function () {
   let park;
 
   beforeEach(function () {
-    park = new Park("Jurassic World");
+    park = new Park("Jurassic World", 150.00);
   });
 
   it("should have a name", function () {
     assert.strictEqual(park.name, "Jurassic World");
   });
 
-  it("should have a ticket price");
+  it("should have a ticket price", function () {
+    assert.strictEqual(park.ticket_price, 150.00);
+  });
 
   it("should have a collection of dinosaurs");
 
