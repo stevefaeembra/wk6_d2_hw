@@ -29,5 +29,17 @@ Park.prototype.mostPopularDinosaur = function () {
   return best_draw;
 };
 
+Park.prototype.fetchDinosaursOfType = function (dinosaurType) {
+    // get all dinos of a specific type
+    // we build up a list
+    let dinos = [];
+    for (let dinosaur of this.dinosaurs) {
+      if (dinosaur.species === dinosaurType) {
+        dinos.push(dinosaur);
+      }
+    }
+    return dinos;
+};
+
 
 module.exports = Park;

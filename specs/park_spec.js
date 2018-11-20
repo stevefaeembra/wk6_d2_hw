@@ -49,7 +49,17 @@ describe('Park',function () {
     assert.strictEqual(park.mostPopularDinosaur(),cleverGirl);
   });
 
-  it("should be possible to Find all dinosaurs of a particular species");
+  it("should be possible to Find all dinosaurs of a particular species", function () {
+    let icky = new Dinosaur("Icthyosaurus", "Carnivore", 100);
+    let barney = new Dinosaur("Velociraptor","Carnivore",50);
+    let cleverGirl = new Dinosaur("Velociraptor","Carnivore",400);
+    let carl = new Dinosaur("Stegasaurus","Herbivore", 120);
+    park.addDinosaur(icky);
+    park.addDinosaur(barney);
+    park.addDinosaur(cleverGirl);
+    park.addDinosaur(carl);
+    assert.deepStrictEqual(park.fetchDinosaursOfType("Velociraptor"),[barney,cleverGirl]);
+  });
 
   it("should be possible to Calculate the total number of visitors per day");
 
