@@ -55,5 +55,8 @@ Park.prototype.getAnnualVisitors = function () {
   return (365*this.getDailyVisitors());
 };
 
+Park.prototype.getAnnualTakings = function () {
+  return (this.getAnnualVisitors() * this.ticket_price);
+};
 
 module.exports = Park;

@@ -82,10 +82,20 @@ describe('Park',function () {
     park.addDinosaur(barney);
     park.addDinosaur(cleverGirl);
     park.addDinosaur(carl);
-    assert.strictEqual(park.getAnnualVisitors(),244550);    
+    assert.strictEqual(park.getAnnualVisitors(),244550);
   });
 
-  it("should be possible to Calculate the total revenue from ticket sales for one year");
+  it("should be possible to Calculate the total revenue from ticket sales for one year", function () {
+    let icky = new Dinosaur("Icthyosaurus", "Carnivore", 100);
+    let barney = new Dinosaur("Velociraptor","Carnivore",50);
+    let cleverGirl = new Dinosaur("Velociraptor","Carnivore",400);
+    let carl = new Dinosaur("Stegasaurus","Herbivore", 120);
+    park.addDinosaur(icky);
+    park.addDinosaur(barney);
+    park.addDinosaur(cleverGirl);
+    park.addDinosaur(carl);
+    assert.strictEqual(park.getAnnualTakings(),36682500);
+  });
 
 
 });
