@@ -39,7 +39,15 @@ describe('Park',function () {
     assert.deepStrictEqual(park.dinosaurs,[icky]);
   });
 
-  it("should be possible to Find the dinosaur that attracts the most visitors");
+  it("should be possible to Find the dinosaur that attracts the most visitors", function () {
+    let icky = new Dinosaur("Icthyosaurus", "Carnivore", 100);
+    let barney = new Dinosaur("Velociraptor","Carnivore",50);
+    let cleverGirl = new Dinosaur("Velociraptor","Carnivore",400);
+    park.addDinosaur(icky);
+    park.addDinosaur(barney);
+    park.addDinosaur(cleverGirl);
+    assert.strictEqual(park.mostPopularDinosaur(),cleverGirl);
+  });
 
   it("should be possible to Find all dinosaurs of a particular species");
 
