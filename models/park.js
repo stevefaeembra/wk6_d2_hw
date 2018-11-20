@@ -59,4 +59,17 @@ Park.prototype.getAnnualTakings = function () {
   return (this.getAnnualVisitors() * this.ticket_price);
 };
 
+Park.prototype.removeAllOfSpecies = function (species) {
+    // safest way is to build a new list with only the
+    // non-matching dinos, then assigning that to the park
+    let just_remaining = [];
+
+    for (let dinosaur of this.dinosaurs) {
+      if (dinosaur.species !== species) {
+        just_remaining.push(dinosaur);
+      }
+    }
+    this.dinosaurs = just_remaining;
+};
+
 module.exports = Park;
