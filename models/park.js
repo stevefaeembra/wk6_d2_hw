@@ -41,5 +41,4 @@ Park.prototype.fetchDinosaursOfType = function (dinosaurType) {
     return dinos;
 };
 
-
 module.exports = Park;
