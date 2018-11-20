@@ -50,5 +50,10 @@ Park.prototype.getDailyVisitors = function () {
     return total;
 };
 
+Park.prototype.getAnnualVisitors = function () {
+  // annual vistors. no christmas holidays for you! :-)
+  return (365*this.getDailyVisitors());
+};
+
 
 module.exports = Park;
